@@ -1,0 +1,24 @@
+<nav>
+    <div class="controls">
+        <%= link_to 'Back', photos_path %>
+        <%= link_to 'Edit', edit_photo_path(@photo) %>
+        <!--<a href="/photo/<%= @photo.id %>/destroy">Delete</a>-->
+    </div>
+</nav>
+
+<p id="notice"><%= notice %></p>
+
+<section>
+    <h2 class="hidden">Selected Image</h2>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="item">
+                <h2><%= @photo.caption %></h2>
+
+                <p><%= @photo.desc %></p>
+                <img src="<%= @photo.avatar %>" alt="<%= @photo.alt %>"/><br>
+
+            </div>
+        </div>
+    </div>
+</section>

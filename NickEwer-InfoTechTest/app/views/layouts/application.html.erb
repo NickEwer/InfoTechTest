@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Hey guys, hope you like my code! -->
+  <title>Nick Ewer - Info-Tech Test</title>
+  
+  <!-- Stylesheets -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="../assets/stylesheets/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/stylesheets/overrides.css">
+  
+  <!-- Scripts -->
+  <script src="../assets/javascripts/bootstrap.js"></script>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <!-- Semantic Header -->
+    <h1 class="hidden">Destiny: Exotic Weapons</h1>
+
+    <!-- Main Site Container -->
+	<div class="container">
+	
+        <!-- Title -->
+        <header>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>DESTINY</h1>
+                    <h2>EXOTIC WEAPONS</h2>
+                </div>
+            </div>
+        </header>
+
+        <%= yield %>
+
+	</div>
+</body>
+</html>

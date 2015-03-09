@@ -1,0 +1,4 @@
+Sometimes after server resets, the first time a new image is added, the image doesn't appear. It works after that everytime.
+
+Couldn't get S3 to connect properly, kept getting 403 ERRORS when trying to upload images.
+Couldn't get thumbnails to generate.

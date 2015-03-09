@@ -1,0 +1,54 @@
+<nav>
+    <div class="row">
+        <div class="col-xs-12 controls">
+            <%= link_to 'New Photo', new_photo_path %>
+        </div>
+    </div>
+</nav>
+
+<!-- Image Thumbnails -->
+<section>
+    <h2 class="hidden">Image List</h2>
+    <div class="image-thumbs">
+            <% @count = 1 %>
+            <% @photos.each do |photo| %>
+
+                <%= if @count == 1
+                    "<!-- NEW ROW --><div class='row'>".html_safe
+                end %>
+
+                <!-- OUTPUT IMAGE -->
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="photos/<%= photo.id %>">
+                        <div class="box" style="background-image:url('<%= photo.avatar %>')">
+                            <!--<img src=" <%= photo.avatar %>" alt="<%= photo.alt %>"/>-->
+                        </div>
+                    </a>
+                </div>
+
+                <%=  if @count == 4
+                  "</div><!-- END ROW -->".html_safe
+                     end %>
+
+                <% @count+=1; %>
+
+                <% if @count == 5
+                  @count = 1
+                end %>
+
+            <% end %>
+
+         <!-- CLOSE ROWS? -->
+             <%= if @count == 2
+                "<div class='col-lg-9 col-md-6 col-sm-12'></div></div><!-- END ROW -->".html_safe
+             end %>
+             <%= if @count == 3
+                "<div class='col-lg-6 col-md-6 col-sm-12'></div></div><!-- END ROW -->".html_safe
+             end %>
+             <%= if @count == 4
+                "<div class='col-lg-3 col-md-6 col-sm-12'></div></div><!-- END ROW -->".html_safe
+             end %>
+
+</div>
+</section>
